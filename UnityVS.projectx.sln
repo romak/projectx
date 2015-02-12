@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.projectx.CSharp.Plugins", "UnityVS.projectx.CSharp.Plugins.csproj", "{261673B5-D16A-2857-1B5A-9A5EC4210E2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.projectx.CSharp", "UnityVS.projectx.CSharp.csproj", "{D33F8403-4CF5-CBB7-6335-FE89D3D901B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{261673B5-D16A-2857-1B5A-9A5EC4210E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{261673B5-D16A-2857-1B5A-9A5EC4210E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{261673B5-D16A-2857-1B5A-9A5EC4210E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33F8403-4CF5-CBB7-6335-FE89D3D901B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33F8403-4CF5-CBB7-6335-FE89D3D901B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33F8403-4CF5-CBB7-6335-FE89D3D901B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33F8403-4CF5-CBB7-6335-FE89D3D901B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
