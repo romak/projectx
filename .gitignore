@@ -3,3 +3,4 @@ metadata
 ScriptAssemblies
 UnityAssemblies
 *.apk
+/obj
