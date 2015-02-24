@@ -3,3 +3,8 @@ metadata
 ScriptAssemblies
 UnityAssemblies
 *.apk
+/obj
+*.suo
+UnityVS.projectx.v11.suo
+*.suo
+*.cache
