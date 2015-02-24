@@ -24,6 +24,12 @@ public class ApplicationManager : MonoBehaviour
         QualitySettings.SetQualityLevel((int)slider.value, true);
     }
 
+
+    public void LoadScene(string name)
+    {
+        Application.LoadLevel(name);
+    }
+
     // Use this for initialization
     void Start()
     {

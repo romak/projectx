@@ -8,3 +8,7 @@ UnityAssemblies
 UnityVS.projectx.v11.suo
 *.suo
 *.cache
+*.cache
+Assets/Standard Assets/Terrain Assets/Trees Ambient-Occlusion/Palm/PalmBranch.psd.meta
+*.cache
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
