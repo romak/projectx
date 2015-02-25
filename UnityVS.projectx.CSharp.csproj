@@ -68,6 +68,8 @@
     <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\AircraftUserControl2Axis.cs" />
     <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\GUI.cs" />
     <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\LandingGear.cs" />
+    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\MissileLaunch.cs" />
+    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\MissileTrajectory.cs" />
     <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\ObjectReset.cs" />
     <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\PlaneControler.cs" />
     <Compile Include="Assets\Menu\Scripts\ApplicationManager.cs" />

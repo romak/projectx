@@ -22,6 +22,7 @@ public class ObjectReset : MonoBehaviour
     {
         transform.position = originalPosition;
         transform.rotation = originalRotation;
+
         if (rigidbody)
         {
             rigidbody.velocity = Vector3.zero;

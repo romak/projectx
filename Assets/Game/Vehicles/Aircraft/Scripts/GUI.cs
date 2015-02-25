@@ -17,13 +17,13 @@ public class GUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        object[] args = new object[] { plane.Throttle, plane.ForwardSpeed * MpsToKph, plane.Altitude };
+//        object[] args = new object[] { plane.Throttle, plane.ForwardSpeed * MpsToKph, plane.Altitude };
 
         // display the aeroplane gui information
-        guiText.text = string.Format(displayText, args);
+  //      guiText.text = string.Format(displayText, args);
 
         //guiText.text = plane.RollAngle.ToString();
-        guiText.text = plane.PitchAngle.ToString();
+    //    guiText.text = plane.PitchAngle.ToString();
 	
 	}
 }
