@@ -4,7 +4,7 @@ using System.Collections;
 public class PlaneControler : MonoBehaviour
 {
 
-    public float speed     = 0.1f;
+    public float speed     = 10.1f;
     public float rollSpeed = 10.0f;
     float rollRate = 20.0f;
     float maxRoll = 45.0f;
