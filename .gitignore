@@ -12,5 +12,8 @@ UnityVS.projectx.v11.suo
 Assets/Standard Assets/Terrain Assets/Trees Ambient-Occlusion/Palm/PalmBranch.psd.meta
 *.cache
 obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+<<<<<<< HEAD
 obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+=======
+>>>>>>> origin/master
 *.cache
