@@ -4,8 +4,11 @@ using System.Collections;
 public class PlaneControler : MonoBehaviour
 {
 
-    public float speed     = 10.1f;
-    public float rollSpeed = 10.0f;
+    public float speed     = 20.0f;
+    public float speedX = 2.0f;
+    public float rollSpeedZ = 20.0f;
+    public float rollSpeedX = 10.0f;
+
     float rollRate = 20.0f;
     float maxRoll = 45.0f;
     float curRollAngle = 0.0f;
@@ -15,8 +18,22 @@ public class PlaneControler : MonoBehaviour
     bool animStarted = false;
     Quaternion startRotation;
 
+    public Animator planeAnim;
+    public AnimationClip rollLeft;
+    public AnimationClip rollRight;
+
     void Start()
     {
+        if (rollLeft)
+        {
+            planeAnim.animation.AddClip(rollLeft, "rollLeft");
+        }
+
+        if (rollRight)
+        {
+            planeAnim.animation.AddClip(rollRight, "rollRight");
+        }
+
     }
 
     IEnumerator TweenRotation(Transform trans, Quaternion destRot, float speed, float threshold)
@@ -34,34 +51,58 @@ public class PlaneControler : MonoBehaviour
 
     void Update()
     {
+        float transAmount = speed * Time.deltaTime;
+        float rotateAmountZ = rollSpeedZ * Time.deltaTime;
+        float rotateAmountX = rollSpeedX * Time.deltaTime;
+        float _speedX = speedX *Time.deltaTime;
+
+        transform.Translate(0, 0, (transAmount * 2));
+
+        if (Input.GetKey("left"))
+        {
+            //transform.Rotate(0, -rotateAmountX, 0);
+            transform.Rotate(0, 0, rotateAmountZ*5);
+        }
+
+        if (Input.GetKey("right"))
+        {
+//            transform.Rotate(0, rotateAmountX, 0);
+            transform.Rotate(0, 0, -rotateAmountZ * 5);
+        }
+
+        return;
+/*
+        // pre-animation example
         startRotation = transform.rotation;
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rotateStep = 1.0f;
             animStarted = true;
+            if (!planeAnim.animation.IsPlaying("rollLeft"))
+                planeAnim.animation.CrossFade("rollLeft");
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             rotateStep = -1.0f;
             animStarted = true;
+            if (!planeAnim.animation.IsPlaying("rollRight"))
+                planeAnim.animation.CrossFade("rollRight");
         }
 
         if (animStarted)
         {
-            Quaternion currentRotation = Quaternion.Euler(0, 0, curRollAngle);
-
-            //transform.rotation = Quaternion.RotateTowards(transform.rotation, currentRotation, 45);
-            transform.rotation = Quaternion.Slerp(startRotation, currentRotation, Time.time * 20.5f);
-            curRollAngle += rotateStep;
+            //Quaternion currentRotation = Quaternion.Euler(0, 0, curRollAngle);
+            //transform.rotation = Quaternion.Slerp(startRotation, currentRotation, Time.time * 20.5f);
+            //curRollAngle += rotateStep;
         }
 
         if (curRollAngle >= 45 || curRollAngle <= -45 || curRollAngle == 0)
         {
             animStarted = false;
         }
-
+        */
 
     }
 
@@ -71,7 +112,7 @@ public class PlaneControler : MonoBehaviour
 
         //curRollAngle = transform.eulerAngles.z;
         //rigidbody.AddRelativeForce(Vector3.up * velocity * planeLift);
-        rigidbody.AddRelativeForce(0, 0, speed);
+        //rigidbody.AddRelativeForce(0, 0, speed);
 
         //if (Input.GetKey(KeyCode.LeftArrow))
         //{
