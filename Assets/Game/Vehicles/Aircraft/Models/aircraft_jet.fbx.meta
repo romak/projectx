@@ -248,6 +248,23 @@ ModelImporter:
     4300064: aircraft_jet_right_doorRear
     4300066: aircraft_jet_left_doorRear
     4300068: aircraft_jet_left_doorFront
+    6400000: aircraft_jet_front_gear
+    6400002: aircraft_jet_front_gearWheel
+    6400004: aircraft_jet_fuselage
+    6400006: aircraft_jet_left_aileron
+    6400008: aircraft_jet_left_doorFront
+    6400010: aircraft_jet_left_doorRear
+    6400012: aircraft_jet_left_flap
+    6400014: aircraft_jet_left_gear
+    6400016: aircraft_jet_left_gearWheel
+    6400018: aircraft_jet_left_slat
+    6400020: aircraft_jet_right_aileron
+    6400022: aircraft_jet_right_doorFront
+    6400024: aircraft_jet_right_doorRear
+    6400026: aircraft_jet_right_flap
+    6400028: aircraft_jet_right_gear
+    6400030: aircraft_jet_right_gearWheel
+    6400032: aircraft_jet_right_slat
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -270,7 +287,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -284,7 +301,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
