@@ -13,14 +13,23 @@ public class MissileLaunch : MonoBehaviour
 
     }
 
-    void Update()
+    public void FireRocket()
     {
-        //if ((Input.GetKeyDown(KeyCode.Space) || (Input.GetButton("Fire1"))) && (Time.time > nextFire))
-        if ((Input.GetKeyDown(KeyCode.Space)) && (Time.time > nextFire))
-            {
+        if (Time.time > nextFire)
+        {
             nextFire = Time.time + fireRate;
             GameObject thisMissile = (GameObject)Instantiate(missile, missilePos.position, transform.rotation);
             Physics.IgnoreCollision(thisMissile.collider, collider);
+        }
+    }
+
+
+    void Update()
+    {
+        //if ((Input.GetKeyDown(KeyCode.Space) || (Input.GetButton("Fire1"))) && (Time.time > nextFire))
+        if ((Input.GetKeyDown(KeyCode.Space)))
+        {
+            FireRocket();
         }
 
     }

@@ -3,24 +3,56 @@ using System.Collections;
 
 public class MissileTrajectory : MonoBehaviour
 {
+    public float speed = 60.0f;
+    public ParticleSystem ps;
+    GameObject target;
 
-    public GameObject explosion;
-
-    // Use this for initialization
     void Start()
     {
+    }
+
+    GameObject FindClosestEnemy(string tag)
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag(tag);
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
+    }
+
+    void Update()
+    {
+        target = FindClosestEnemy("enemy");
+
+        if (target != null)
+        {
+            Vector3 relativePos = target.transform.position - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(relativePos), speed * Time.deltaTime);
+        }
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rigidbody.AddForce(transform.TransformDirection(Vector3.forward) * 60.0f);
+        rigidbody.AddForce(transform.TransformDirection(Vector3.forward) * speed);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-	    ContactPoint contact  = collision.contacts[0];
+        ContactPoint contact = collision.contacts[0];
 
         if (collision.gameObject.tag == "enemy")
         {
@@ -29,8 +61,6 @@ public class MissileTrajectory : MonoBehaviour
 
         Destroy(gameObject);
         //Destroy(this);
-
-
     }
 
 }
