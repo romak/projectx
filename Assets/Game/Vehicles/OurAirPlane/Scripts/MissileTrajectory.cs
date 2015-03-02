@@ -6,9 +6,11 @@ public class MissileTrajectory : MonoBehaviour
     public float speed = 60.0f;
     public ParticleSystem ps;
     GameObject target;
+    GameObject lastTarget;
 
     void Start()
     {
+        target = FindClosestEnemy("enemy");
     }
 
     GameObject FindClosestEnemy(string tag)
@@ -38,6 +40,7 @@ public class MissileTrajectory : MonoBehaviour
 
         if (target != null)
         {
+            print(target.name);
             Vector3 relativePos = target.transform.position - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(relativePos), speed * Time.deltaTime);
         }
@@ -50,6 +53,12 @@ public class MissileTrajectory : MonoBehaviour
         rigidbody.AddForce(transform.TransformDirection(Vector3.forward) * speed);
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        //Destroy(gameObject);
+        //Destroy(this);
+
+    }
     void OnCollisionEnter(Collision collision)
     {
         ContactPoint contact = collision.contacts[0];
@@ -60,7 +69,7 @@ public class MissileTrajectory : MonoBehaviour
         }
 
         Destroy(gameObject);
-        //Destroy(this);
+        Destroy(this);
     }
 
 }

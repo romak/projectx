@@ -19,7 +19,7 @@ public class MissileLaunch : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             GameObject thisMissile = (GameObject)Instantiate(missile, missilePos.position, transform.rotation);
-            Physics.IgnoreCollision(thisMissile.collider, collider);
+            //Physics.IgnoreCollision(thisMissile.collider, collider);
         }
     }
 
