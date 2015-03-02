@@ -63,16 +63,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\AircraftController.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\AircraftRestrictions.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\AircraftUserControl2Axis.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\FollowCamera.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\GUI.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\LandingGear.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\MissileLaunch.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\MissileTrajectory.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\ObjectReset.cs" />
-    <Compile Include="Assets\Game\Vehicles\Aircraft\Scripts\PlaneControler.cs" />
+    <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\FollowCamera.cs" />
+    <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\GUI.cs" />
+    <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\MissileLaunch.cs" />
+    <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\MissileTrajectory.cs" />
+    <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\ObjectReset.cs" />
+    <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\PlaneControler.cs" />
     <Compile Include="Assets\Menu\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Menu\Scripts\PanelManager.cs" />
   </ItemGroup>
