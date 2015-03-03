@@ -51,7 +51,7 @@ public class MissileTrajectory : MonoBehaviour
     void FixedUpdate()
     {
 
-        rigidbody.AddForce(transform.TransformDirection(Vector3.forward) * speed);
+        GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.forward) * speed);
         target = FindClosestEnemy("enemy");
 
         if (target != null)

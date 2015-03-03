@@ -16,7 +16,7 @@ public class ApplicationManager : MonoBehaviour
 
     public void SetMasterVolume(Slider slider)
     {
-        audio.volume = slider.value;
+        GetComponent<AudioSource>().volume = slider.value;
     }
 
     public void SetVideoQuality(Slider slider)

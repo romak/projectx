@@ -76,8 +76,8 @@ public class PlaneControler : MonoBehaviour
 
         moveVertical = Mathf.Clamp(moveVertical, 0.3f, 1.0f);
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, speed * moveVertical);
-        rigidbody.velocity = movement * speedX;
-        rigidbody.rotation = Quaternion.Euler(0.0f, 0.0f, rigidbody.velocity.x * -tilt);
+        GetComponent<Rigidbody>().velocity = movement * speedX;
+        GetComponent<Rigidbody>().rotation = Quaternion.Euler(0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
 
     }
 
