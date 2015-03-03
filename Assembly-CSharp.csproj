@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,25 +39,45 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>H:/engines/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>H:/engines/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game\CrossPlatformInput\AbstractButton.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\AxisTouchButton.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\Button.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\ButtonDownTextureChange.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\ButtonFactory.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\CrossPlatformInput.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\Joystick.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\JoystickAbstract.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\MobileControlRig.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\MobileInput.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\StandaloneInput.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\TiltInput.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\TouchJoystick.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\TouchPad.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\TouchPadPositional.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\TouchPadRelativePositional.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\TouchPadSwipe.cs" />
+     <Compile Include="Assets\Game\CrossPlatformInput\VirtualInput.cs" />
      <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\GUI.cs" />
      <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\MissileLaunch.cs" />
      <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\MissileTrajectory.cs" />
      <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\ObjectReset.cs" />
      <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\PlaneControler.cs" />
+     <Compile Include="Assets\Game\Vehicles\OurAirPlane\Scripts\TestAgent.cs" />
      <Compile Include="Assets\Menu\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Menu\Scripts\PanelManager.cs" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
@@ -65,7 +85,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>H:/engines/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

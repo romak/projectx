@@ -10,7 +10,7 @@ public class MissileTrajectory : MonoBehaviour
 
     void Start()
     {
-        target = FindClosestEnemy("enemy");
+        //target = FindClosestEnemy("enemy");
     }
 
     GameObject FindClosestEnemy(string tag)
@@ -25,6 +25,7 @@ public class MissileTrajectory : MonoBehaviour
         {
             Vector3 diff = go.transform.position - position;
             float curDistance = diff.sqrMagnitude;
+
             if (curDistance < distance)
             {
                 closest = go;
@@ -36,11 +37,10 @@ public class MissileTrajectory : MonoBehaviour
 
     void Update()
     {
-        target = FindClosestEnemy("enemy");
 
         if (target != null)
         {
-            print(target.name);
+            //print(target.name);
             Vector3 relativePos = target.transform.position - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(relativePos), speed * Time.deltaTime);
         }
@@ -50,7 +50,17 @@ public class MissileTrajectory : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         rigidbody.AddForce(transform.TransformDirection(Vector3.forward) * speed);
+        target = FindClosestEnemy("enemy");
+
+        if (target != null)
+        {
+            //print(target.name);
+            Vector3 relativePos = target.transform.position - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(relativePos), speed * Time.deltaTime);
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -59,6 +69,14 @@ public class MissileTrajectory : MonoBehaviour
         //Destroy(this);
 
     }
+
+    IEnumerator DoSomething()
+    {
+        Destroy(gameObject);
+        yield return new WaitForSeconds(1f);
+
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         ContactPoint contact = collision.contacts[0];
@@ -68,8 +86,10 @@ public class MissileTrajectory : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        //print(collision.gameObject.name);
+        //DoSomething();
         Destroy(gameObject);
-        Destroy(this);
+        //Destroy(this);
     }
 
 }
